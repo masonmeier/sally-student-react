@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This is an example resume for a fictional character named Sally Student.">
+    <title>Sally Student Resume</title>
+</head>
+<body>
+<div id="application-root"></div>
+<script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+
+<script type="text/babel">
+    function App(studentName, resume) {
+        return (
+            <main>
+                {studentName.children}
+                {resume.children}
+            </main>
+        );
+    }
+
+    // Nested elements inside the App
+    ReactDOM.render(
+        <app className="studentName">
+            <h1>Sally Student</h1>
+        </app>,
+        <App className='resume'>
+            <header>Thank you for taking the real time to view this fictional resume for this fictional person.</header>
+            <h2>Contact</h2>
+            <address>
+                <li>
+                    <a
+                        href="mailto:minipax.meier@gmail.com?subject=Hi There!">
+                        email
+                    </a>
+                </li>
+                <li>916.916.9161</li>
+            </address>
+            <h3>Education</h3>
+            <li>6 years of training in offshore organ harvesting</li>
+            <li>12 years of expert pen ink taste testing</li>
+            <h3>Employement History</h3>
+            <li>Organ Pirate</li>
+            <p>2013-Present</p>
+            <p>Worked 6 years harvesting organs from unsuspecting sailors. Used powers I developed while licking
+                toxic ink at previous position to track and pursue victims. </p>
+            <li>Professional Scented Ink for Children Taste Tester</li>
+            <p>2001-2013</p>
+            <p>Worked 12 years literally just eating markers. Was let go after developing
+                the ability to echo locate and speak to fish afer eating markers from the halloween line.
+                Boss said that the screeching from my echolocation was making people uncomfortable.</p>
+            <img src="https://i.redd.it/rzidfo0an7001.jpg" alt="Definitley Not Danny Devito"></img>
+        </App>,
+        document.querySelector('#application-root')
+    );
+</script>
+</body>
+</html>
