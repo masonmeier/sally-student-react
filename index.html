@@ -19,10 +19,9 @@
 </script>
 
 <script type="text/babel">
-    function App(studentName, resume) {
+    function App(resume) {
         return (
             <main>
-                {studentName.children}
                 {resume.children}
             </main>
         );
@@ -30,10 +29,9 @@
 
     // Nested elements inside the App
     ReactDOM.render(
-        <app className="studentName">
-            <h1>Sally Student</h1>
-        </app>,
+
         <App className='resume'>
+            <h1>Sally Student</h1>
             <header>Thank you for taking the real time to view this fictional resume for this fictional person.</header>
             <h2>Contact</h2>
             <address>
